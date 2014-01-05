@@ -137,6 +137,7 @@ def parse_email(raw_email):
 							'MIME-Version',
 							'X-Spam-Status',
 							'X-Spam-Score',
+							'Reply-To',
 							'Content-Type']
 
 	parsed_email['headers'] = []
