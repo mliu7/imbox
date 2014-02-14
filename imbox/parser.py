@@ -50,7 +50,10 @@ def get_mail_addresses(message, header_name):
 
 
 def decode_param(param):
-	name, v = param.split('=', 1)
+	try:
+		name, v = param.split('=', 1)
+	except ValueError:
+		return "", ""
 	values = v.split('\n')
 	value_results = []
 	for value in values:
